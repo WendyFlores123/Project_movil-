@@ -8,7 +8,9 @@
 
 import UIKit
 
-class InicioVC: BaseViewController, UIScrollViewDelegate {
+class InicioVC: UIViewController, UIScrollViewDelegate {
+    
+   
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -18,6 +20,7 @@ class InicioVC: BaseViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBackground()
         
         pageControl.numberOfPages = images.count
         for index in 0..<images.count{
@@ -44,15 +47,22 @@ class InicioVC: BaseViewController, UIScrollViewDelegate {
         let pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width
         pageControl.currentPage = Int(pageNumber)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    //Constante para imagen de fondo
+    let backgroundImageView = UIImageView()
+    //Funcion para imagen de fondo
+    func setBackground() {
+        view.addSubview(backgroundImageView)
+        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        
+        backgroundImageView.image = UIImage(named: "fondo")
+        view.sendSubview(toBack: backgroundImageView)
     }
-    */
+
+   
 
 }

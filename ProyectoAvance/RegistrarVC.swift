@@ -18,6 +18,7 @@ class RegistrarVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBackground()
 
         // Do any additional setup after loading the view.
     }
@@ -61,14 +62,19 @@ class RegistrarVC: UIViewController {
         
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //Constante para imagen de fondo
+    let backgroundImageView = UIImageView()
+    //Funcion para imagen de fondo
+    func setBackground() {
+        view.addSubview(backgroundImageView)
+        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        
+        backgroundImageView.image = UIImage(named: "fondo")
+        view.sendSubview(toBack: backgroundImageView)
     }
-    */
 
 }

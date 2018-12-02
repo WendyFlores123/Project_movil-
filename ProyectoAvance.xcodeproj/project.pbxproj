@@ -25,6 +25,8 @@
 		927B09FA2190F0A700A8257E /* DetalleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B09F92190F0A700A8257E /* DetalleVC.swift */; };
 		927B09FC2190F0D200A8257E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B09FB2190F0D200A8257E /* MainVC.swift */; };
 		927B09FE2190F11C00A8257E /* CeldaCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927B09FD2190F11C00A8257E /* CeldaCVC.swift */; };
+		92E9B41E21B3D08B00B1A067 /* CajaDeTexto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E9B41D21B3D08B00B1A067 /* CajaDeTexto.swift */; };
+		92E9B42021B3D54600B1A067 /* Botones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E9B41F21B3D54600B1A067 /* Botones.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		927B09F92190F0A700A8257E /* DetalleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleVC.swift; sourceTree = "<group>"; };
 		927B09FB2190F0D200A8257E /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		927B09FD2190F11C00A8257E /* CeldaCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaCVC.swift; sourceTree = "<group>"; };
+		92E9B41D21B3D08B00B1A067 /* CajaDeTexto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CajaDeTexto.swift; sourceTree = "<group>"; };
+		92E9B41F21B3D54600B1A067 /* Botones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Botones.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 		927B09D72190E79F00A8257E /* ProyectoAvance */ = {
 			isa = PBXGroup;
 			children = (
+				92E9B41D21B3D08B00B1A067 /* CajaDeTexto.swift */,
+				92E9B41F21B3D54600B1A067 /* Botones.swift */,
 				923FCD3B2191484800F47E12 /* BaseViewController.swift */,
 				923FCD392191479200F47E12 /* MenuViewController.swift */,
 				927B09D82190E79F00A8257E /* AppDelegate.swift */,
@@ -175,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				927B09F42190EB6800A8257E /* RegistrarVC.swift in Sources */,
+				92E9B42021B3D54600B1A067 /* Botones.swift in Sources */,
 				923FCD3A2191479200F47E12 /* MenuViewController.swift in Sources */,
 				927B09EE2190E8E100A8257E /* InicioVC.swift in Sources */,
 				927B09F82190EEF200A8257E /* LoginVC.swift in Sources */,
@@ -183,6 +190,7 @@
 				927B09FE2190F11C00A8257E /* CeldaCVC.swift in Sources */,
 				923FCD4421914E1900F47E12 /* PagoVC.swift in Sources */,
 				927B09D92190E79F00A8257E /* AppDelegate.swift in Sources */,
+				92E9B41E21B3D08B00B1A067 /* CajaDeTexto.swift in Sources */,
 				927B09FA2190F0A700A8257E /* DetalleVC.swift in Sources */,
 				923FCD4621914E4E00F47E12 /* FinalizarVC.swift in Sources */,
 				927B09E12190E79F00A8257E /* ProyectoAvance.xcdatamodeld in Sources */,
