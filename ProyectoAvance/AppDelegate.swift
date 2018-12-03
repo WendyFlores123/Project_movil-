@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    var urlServicio:String = "http://localhost:3000/api"
+    
     func mostrarCuadroDialogo(titulo : String, mensaje: String, vista: UIViewController){
         let ventana = UIAlertController(title: titulo, message: mensaje, preferredStyle: .alert)
         let botonOK = UIAlertAction(title: "Aceptar", style: .default, handler: nil)

@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Alamofire
 
 class RegistrarVC: UIViewController {
     
+    @IBOutlet weak var txtNombres: SATextField!
+    @IBOutlet weak var txtApellidos: SATextField!
+    @IBOutlet weak var txtDNI: SATextField!
     @IBOutlet weak var txtCorreo: UITextField!
     @IBOutlet weak var txtClave: UITextField!
     @IBOutlet weak var txtConfirmarClave: UITextField!
@@ -32,13 +36,31 @@ class RegistrarVC: UIViewController {
         
         let delegado = UIApplication.shared.delegate as! AppDelegate
         
+        let nombres = txtNombres.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let apellidos = txtApellidos.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         let correo = txtCorreo.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let dni = txtDNI.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         let clave = txtClave.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         let confirmaClave = txtConfirmarClave.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         
+        if nombres?.count == 0
+        {
+            delegado.mostrarCuadroDialogo(titulo: "AVISO", mensaje: "Por favor ingrese sus nombres", vista: self)
+            return
+        }
+        if apellidos?.count == 0
+        {
+            delegado.mostrarCuadroDialogo(titulo: "AVISO", mensaje: "Por favor ingrese sus apellidos", vista: self)
+            return
+        }
         if correo?.count == 0
         {
             delegado.mostrarCuadroDialogo(titulo: "AVISO", mensaje: "Por favor ingrese su correo", vista: self)
+            return
+        }
+        if dni?.count == 0
+        {
+            delegado.mostrarCuadroDialogo(titulo: "AVISO", mensaje: "Por favor ingrese su dni", vista: self)
             return
         }
         if clave?.count == 0
@@ -57,9 +79,28 @@ class RegistrarVC: UIViewController {
             return
         }
         
-        //navegacion con el segue
         
+        //Registramos usando el servicio REST
+        let URL = delegado.urlServicio + "/usuarios"
+        let parametros = ["nombres":nombres,"apellidos":apellidos,"correo":correo,"dni":dni, "clave":clave]
         
+        request(URL, method: .post, parameters: parametros, encoding: JSONEncoding.default, headers: nil)
+            .responseJSON{(resultado) in
+                if resultado.response?.statusCode == 500
+                {
+                    delegado.mostrarCuadroDialogo(titulo: "ERROR", mensaje: "Error al registrar usuario", vista: self)
+                }
+                else
+                {
+                    delegado.mostrarCuadroDialogo(titulo: "AVISO", mensaje: "Usuario registrado", vista: self)
+                    
+                    self.txtNombres.text = ""
+                    self.txtCorreo.text = ""
+                    self.txtClave.text = ""
+                    self.txtConfirmarClave.text = ""
+                }
+                
+        }
     }
 
     //Constante para imagen de fondo

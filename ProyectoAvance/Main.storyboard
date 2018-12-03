@@ -545,6 +545,9 @@
                                                     <constraint firstAttribute="height" constant="55" id="aRx-h3-aKP"/>
                                                 </constraints>
                                                 <state key="normal" title="Registrar"/>
+                                                <connections>
+                                                    <action selector="registrarUsuario:" destination="GTu-cc-TVo" eventType="touchUpInside" id="cWx-AT-Iwq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -618,6 +621,14 @@
                         <viewLayoutGuide key="safeArea" id="3EZ-9q-Ywm"/>
                     </view>
                     <size key="freeformSize" width="414" height="1000"/>
+                    <connections>
+                        <outlet property="txtApellidos" destination="7nG-Qp-k1s" id="GeR-qA-vaY"/>
+                        <outlet property="txtClave" destination="D2T-fB-vyS" id="6bH-ZU-e9V"/>
+                        <outlet property="txtConfirmarClave" destination="Psq-wU-J57" id="wuh-on-6fo"/>
+                        <outlet property="txtCorreo" destination="kFC-VM-khr" id="Ta1-gM-zAd"/>
+                        <outlet property="txtDNI" destination="zef-qd-TND" id="eJL-bs-TsM"/>
+                        <outlet property="txtNombres" destination="jFt-ak-ckj" id="AcL-dd-pny"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZo-tg-RwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -660,6 +671,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aeF-5D-sYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2312.8000000000002" y="858.62068965517244"/>
+        </scene>
+        <!--Mi CuentaVC-->
+        <scene sceneID="PBz-M2-CKb">
+            <objects>
+                <viewController restorationIdentifier="MiCuenta" storyboardIdentifier="MiCuenta" id="Tan-ui-taj" customClass="MiCuentaVC" customModule="ProyectoAvance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="adB-r7-Tar">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="is5-HY-CnX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kNK-KV-HJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2314" y="1536"/>
         </scene>
         <!--OfertaVC-->
         <scene sceneID="62X-8P-Smc">

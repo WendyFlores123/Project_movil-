@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginVC: UIViewController {
     var iconClick = true
@@ -34,9 +35,8 @@ class LoginVC: UIViewController {
     @IBAction func Autenticar(_ sender: Any) {
         let correo = txtCorreo.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         let clave = txtContraseña.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        
         let delegado = UIApplication.shared.delegate as! AppDelegate
-        
-        
         
         if correo?.count == 0
         {
@@ -49,16 +49,38 @@ class LoginVC: UIViewController {
             delegado.mostrarCuadroDialogo(titulo: "AVISO", mensaje: "Por favor ingrese su clave", vista: self)
             return;
         }
+       
         
-        if (correo == "admin" && clave == "123")
-        {
-            //navegas a la app
-            self.performSegue(withIdentifier: "IrMainVC", sender: self)
-        }
-        else {
-            
-            delegado.mostrarCuadroDialogo(titulo: "ERROR", mensaje: "Error de Autenticaciòn", vista: self)
-            
+        let URL = delegado.urlServicio + "/Autenticar"
+        let parametros = ["correo":correo, "clave":clave]
+        
+        request(URL, method: .post, parameters: parametros, encoding: JSONEncoding.default, headers: nil)
+            .responseJSON{(resultado) in
+                if resultado.response?.statusCode == 500
+                {
+                    delegado.mostrarCuadroDialogo(titulo: "ERROR", mensaje: "error con el servicio de autenticaciòn", vista: self)
+                }
+                else if resultado.response?.statusCode == 401
+                {
+                    delegado.mostrarCuadroDialogo(titulo: "ERROR", mensaje: "usuario no existe", vista: self)
+                }
+                else if resultado.response?.statusCode == 501
+                {
+                     delegado.mostrarCuadroDialogo(titulo: "ERROR", mensaje: "problemas con el proceso de encriptaciòn", vista: self)
+                }
+                else if resultado.response?.statusCode == 404
+                {
+                    delegado.mostrarCuadroDialogo(titulo: "ERROR", mensaje: "Error en su clave", vista: self)
+                }
+                else
+                {
+                    self.performSegue(withIdentifier: "IrMainVC", sender: self)
+                    
+                    self.txtCorreo.text = ""
+                    self.txtContraseña.text = ""
+                }
+                
+                
         }
     }
     

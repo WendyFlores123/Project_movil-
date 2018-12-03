@@ -56,7 +56,8 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func updateArrayMenuOptions(){
-        arrayMenuOptions.append(["title":"Home", "icon":"HomeIcon"])
+        arrayMenuOptions.append(["title":"Principal", "icon":"HomeIcon"])
+        arrayMenuOptions.append(["title":"Mi Cuenta", "icon":"HomeIcon"])
         arrayMenuOptions.append(["title":"Prueba", "icon":"PlayIcon"])
         arrayMenuOptions.append(["title":"Ofertas", "icon":"PlayIcon"])
         arrayMenuOptions.append(["title":"Cesta de Compra", "icon":"PlayIcon"])
