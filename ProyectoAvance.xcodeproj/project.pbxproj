@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		619AFA15DF9CE16FCF7AB01A /* Pods_ProyectoAvance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E522BCC392800757656C92D6 /* Pods_ProyectoAvance.framework */; };
-		923FCD3A2191479200F47E12 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923FCD392191479200F47E12 /* MenuViewController.swift */; };
-		923FCD3C2191484800F47E12 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923FCD3B2191484800F47E12 /* BaseViewController.swift */; };
-		923FCD3E219148DA00F47E12 /* Prueba.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923FCD3D219148DA00F47E12 /* Prueba.swift */; };
 		923FCD40219149C500F47E12 /* OfertaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923FCD3F219149C500F47E12 /* OfertaVC.swift */; };
 		923FCD4221914DD100F47E12 /* CestaCompraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923FCD4121914DD100F47E12 /* CestaCompraVC.swift */; };
 		923FCD4421914E1900F47E12 /* PagoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923FCD4321914E1900F47E12 /* PagoVC.swift */; };
@@ -34,9 +31,6 @@
 /* Begin PBXFileReference section */
 		2CA07F8D4B976820BCD82017 /* Pods-ProyectoAvance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoAvance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoAvance/Pods-ProyectoAvance.debug.xcconfig"; sourceTree = "<group>"; };
 		2D2781FDBBA886CA92B0D761 /* Pods-ProyectoAvance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoAvance.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoAvance/Pods-ProyectoAvance.release.xcconfig"; sourceTree = "<group>"; };
-		923FCD392191479200F47E12 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		923FCD3B2191484800F47E12 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		923FCD3D219148DA00F47E12 /* Prueba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba.swift; sourceTree = "<group>"; };
 		923FCD3F219149C500F47E12 /* OfertaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfertaVC.swift; sourceTree = "<group>"; };
 		923FCD4121914DD100F47E12 /* CestaCompraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CestaCompraVC.swift; sourceTree = "<group>"; };
 		923FCD4321914E1900F47E12 /* PagoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagoVC.swift; sourceTree = "<group>"; };
@@ -95,8 +89,6 @@
 			children = (
 				92E9B41D21B3D08B00B1A067 /* CajaDeTexto.swift */,
 				92E9B41F21B3D54600B1A067 /* Botones.swift */,
-				923FCD3B2191484800F47E12 /* BaseViewController.swift */,
-				923FCD392191479200F47E12 /* MenuViewController.swift */,
 				927B09D82190E79F00A8257E /* AppDelegate.swift */,
 				927B09E22190E7A000A8257E /* Assets.xcassets */,
 				923FCD472191512A00F47E12 /* Main.storyboard */,
@@ -109,7 +101,6 @@
 				927B09F92190F0A700A8257E /* DetalleVC.swift */,
 				927B09FB2190F0D200A8257E /* MainVC.swift */,
 				927B09FD2190F11C00A8257E /* CeldaCVC.swift */,
-				923FCD3D219148DA00F47E12 /* Prueba.swift */,
 				923FCD3F219149C500F47E12 /* OfertaVC.swift */,
 				923FCD4121914DD100F47E12 /* CestaCompraVC.swift */,
 				923FCD4321914E1900F47E12 /* PagoVC.swift */,
@@ -250,11 +241,9 @@
 			files = (
 				927B09F42190EB6800A8257E /* RegistrarVC.swift in Sources */,
 				92E9B42021B3D54600B1A067 /* Botones.swift in Sources */,
-				923FCD3A2191479200F47E12 /* MenuViewController.swift in Sources */,
 				927B09EE2190E8E100A8257E /* InicioVC.swift in Sources */,
 				927B09F82190EEF200A8257E /* LoginVC.swift in Sources */,
 				927B09FC2190F0D200A8257E /* MainVC.swift in Sources */,
-				923FCD3C2191484800F47E12 /* BaseViewController.swift in Sources */,
 				927B09FE2190F11C00A8257E /* CeldaCVC.swift in Sources */,
 				923FCD4421914E1900F47E12 /* PagoVC.swift in Sources */,
 				927B09D92190E79F00A8257E /* AppDelegate.swift in Sources */,
@@ -263,7 +252,6 @@
 				9265F33821B4BBA700963087 /* MiCuentaVC.swift in Sources */,
 				923FCD4621914E4E00F47E12 /* FinalizarVC.swift in Sources */,
 				927B09E12190E79F00A8257E /* ProyectoAvance.xcdatamodeld in Sources */,
-				923FCD3E219148DA00F47E12 /* Prueba.swift in Sources */,
 				923FCD4221914DD100F47E12 /* CestaCompraVC.swift in Sources */,
 				923FCD40219149C500F47E12 /* OfertaVC.swift in Sources */,
 			);

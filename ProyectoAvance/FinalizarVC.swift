@@ -8,12 +8,11 @@
 
 import UIKit
 
-class FinalizarVC: BaseViewController {
+class FinalizarVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addSlideMenuButton()
 
         // Do any additional setup after loading the view.
     }

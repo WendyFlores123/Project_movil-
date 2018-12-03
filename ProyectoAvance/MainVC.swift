@@ -1,6 +1,6 @@
 import UIKit
 
-class MainVC: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     let imagenes = ["Sopa","Postres","Pizza","Bocadillos",
                     "Bebidas","Acompañamiento","Almuerzo","Desayuno","Panes","Platillos Principales","Sanguches"]
@@ -26,7 +26,6 @@ class MainVC: BaseViewController, UICollectionViewDataSource, UICollectionViewDe
         
         // Do any additional setup after loading the view.
         
-        addSlideMenuButton()
     }
     
     override func didReceiveMemoryWarning() {

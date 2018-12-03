@@ -21,7 +21,6 @@ class InicioVC: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBackground()
         
         pageControl.numberOfPages = images.count
         for index in 0..<images.count{

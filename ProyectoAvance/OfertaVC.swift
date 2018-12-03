@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OfertaVC: BaseViewController {
+class OfertaVC: UIViewController {
     
     @IBOutlet weak var btnDrop: UIButton!
     @IBOutlet weak var tblView: UITableView!
@@ -20,7 +20,6 @@ class OfertaVC: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSlideMenuButton()
         
         tblView.isHidden = true
         lbl.isHidden = true

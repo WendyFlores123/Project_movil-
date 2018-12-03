@@ -8,12 +8,10 @@
 
 import UIKit
 
-class CestaCompraVC: BaseViewController {
+class CestaCompraVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSlideMenuButton()
-
         // Do any additional setup after loading the view.
     }
     
